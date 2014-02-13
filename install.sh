@@ -13,7 +13,7 @@ print_fail() {
 
 print_status "Installing DOT Files"
 if [ ! -d ${HOME}/.dotfiles ] ; then
-  cd ${HOME} && git clone git@github.com:jbussdieker/dotfiles.git .dotfiles
+  cd ${HOME} && git clone -q git@github.com:jbussdieker/dotfiles.git .dotfiles
   print_success
 
   cd ${HOME}/.dotfiles && ./setup.sh

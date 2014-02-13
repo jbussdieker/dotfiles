@@ -11,17 +11,24 @@ print_fail() {
   echo -ne "\033[74G[\033[31m NG \033[00m]\n"
 }
 
-print_status "Setting up bash dot files"
-ln -s -f ~/.dotfiles/bash/profile ~/.profile
-ln -s -f ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -s -f ~/.dotfiles/bash/bash_aliases ~/.bash_aliases
+print_status "Downloading submodules..."
+cd ~/.dotfiles
+git submodule -q init
+git submodule -q update
 print_success
 
-print_status "Setting up vim dot files"
-ln -s -f ~/.dotfiles/vim/vimrc ~/.vimrc
-ln -s -f ~/.dotfiles/vim ~/.vim
+print_status "Setting up bash dot files..."
+ln -sf ~/.dotfiles/bash/profile ~/.profile
+ln -sf ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -sf ~/.dotfiles/bash/bash_aliases ~/.bash_aliases
 print_success
 
-print_status "Setting up git dot files"
-ln -s -f ~/.dotfiles/git/gitconfig ~/.gitconfig
+print_status "Setting up vim dot files..."
+ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
+ln -sf ~/.dotfiles/vim/gvimrc ~/.gvimrc
+ln -Tsf ~/.dotfiles/vim ~/.vim
+print_success
+
+print_status "Setting up git dot files..."
+ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
 print_success

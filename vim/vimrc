@@ -1,9 +1,4 @@
 call pathogen#incubate()
 call pathogen#helptags()
 
-colorscheme solarized
-
-set background=dark
-set guifont=Monospace\ 13
-
 nmap <silent> <c-n> :NERDTreeToggle<CR>

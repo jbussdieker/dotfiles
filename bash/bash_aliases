@@ -1,1 +1,4 @@
-alias blah='echo blah'
+# Containers
+for index in 1 2 3 5 6 7 10 12 13 17; do
+  alias c${index}="ssh c${index}.moov.sh"
+done

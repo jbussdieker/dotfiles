@@ -2,3 +2,9 @@ call pathogen#incubate()
 call pathogen#helptags()
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
+
+au BufRead,BufNewFile *.rb setfiletype ruby
+:autocmd FileType ruby set shiftwidth=2
+:autocmd FileType ruby set softtabstop=2
+:autocmd FileType ruby set autoindent
+:autocmd FileType ruby set expandtab

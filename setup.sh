@@ -14,7 +14,7 @@ print_fail() {
 print_status "Setting up bash dot files"
 ln -s -f ~/.dotfiles/bash/profile ~/.profile
 ln -s -f ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -s -f ~/.dotfiles/bash/bash_local ~/.bash_local
+ln -s -f ~/.dotfiles/bash/bash_aliases ~/.bash_aliases
 print_success
 
 print_status "Setting up vim dot files"

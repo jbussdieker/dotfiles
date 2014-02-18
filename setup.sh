@@ -26,7 +26,7 @@ print_success
 print_status "Setting up vim dot files..."
 ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -sf ~/.dotfiles/vim/gvimrc ~/.gvimrc
-ln -Tsf ~/.dotfiles/vim ~/.vim
+[ -d ~/.vim ] || ln -sf ~/.dotfiles/vim ~/.vim
 print_success
 
 print_status "Setting up git dot files..."

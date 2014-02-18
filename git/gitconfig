@@ -3,3 +3,5 @@
 	email = jbussdieker@gmail.com
 [color]
 	ui = true
+[push]
+	default = matching

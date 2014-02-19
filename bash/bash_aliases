@@ -1,6 +1,6 @@
 # Containers
 for index in 1 2 3 5 6 7 10 12 13 17; do
-  alias c${index}="ssh c${index}.moov.sh"
+  alias c${index}="ssh josh@c${index}.moov.sh"
 done
 
 # RVM Stuff
@@ -31,3 +31,6 @@ LTPURPLE="\[\033[1;35m\]"
    WHITE="\[\033[1;37m\]"
 
 PS1="${DKGREY}[${LTBLUE}\u${RESET}@${LTCYAN}\H${DKGREY}:${WHITE}${SSH_TTY:-o} ${LTGREEN}\$(ps1_git_status)${DKGREY}] ${WHITE}\w ${LTRED}\$(rvm-prompt)${RESET}\n\$ "
+
+# Hack for Nokogiri
+export NOKOGIRI_USE_SYSTEM_LIBRARIES=true

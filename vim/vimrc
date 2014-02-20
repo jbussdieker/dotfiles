@@ -4,6 +4,7 @@ call pathogen#helptags()
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 :set autochdir
+:set directory=~/tmp/vim//
 
 au BufRead,BufNewFile *.rb setfiletype ruby
 :autocmd FileType ruby set shiftwidth=2

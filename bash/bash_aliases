@@ -34,3 +34,6 @@ PS1="${DKGREY}[${LTBLUE}\u${RESET}@${LTCYAN}\H${DKGREY}:${WHITE}${SSH_TTY:-o} ${
 
 # Hack for Nokogiri
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+# Hack for RVM
+export rvmsudo_secure_path=1

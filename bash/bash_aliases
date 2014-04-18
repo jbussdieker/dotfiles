@@ -3,11 +3,11 @@ for index in 1 2 3 5 6 7 10 12 13 17; do
   alias c${index}="ssh josh@c${index}.moov.sh"
 done
 
-# RVM Stuff
-[[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
-
 # GVM Stuff
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+
+# RVM Stuff
+[[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 
 # GIT Stuff
 ps1_git_status()

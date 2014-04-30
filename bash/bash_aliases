@@ -3,6 +3,10 @@ for index in 1 2 3 5 6 7 10 12 13 17; do
   alias c${index}="ssh josh@c${index}.moov.sh"
 done
 
+for index in 10; do
+  alias cd${index}="ssh josh@c${index}.moov-dev.sh"
+done
+
 # GVM Stuff
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 

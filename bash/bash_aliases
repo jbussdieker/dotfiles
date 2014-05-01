@@ -3,7 +3,7 @@ for index in 1 2 3 5 6 7 10 12 13 17; do
   alias c${index}="ssh josh@c${index}.moov.sh"
 done
 
-for index in 10; do
+for index in 3 10; do
   alias cd${index}="ssh josh@c${index}.moov-dev.sh"
 done
 

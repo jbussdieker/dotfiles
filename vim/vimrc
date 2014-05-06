@@ -6,8 +6,10 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 :set autochdir
 :set directory=~/tmp/vim//
 
-au BufRead,BufNewFile *.rb setfiletype ruby
-:autocmd FileType ruby set shiftwidth=2
-:autocmd FileType ruby set softtabstop=2
-:autocmd FileType ruby set autoindent
-:autocmd FileType ruby set expandtab
+" Soft tabs by default
+:set tabstop=2
+:set shiftwidth=2
+:set softtabstop=2
+:set expandtab
+" Autoindent by default
+:set autoindent

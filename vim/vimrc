@@ -3,6 +3,7 @@ call pathogen#helptags()
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
+:syntax on
 :set autochdir
 :set directory=~/tmp/vim//
 

@@ -14,3 +14,5 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 :set expandtab
 " Autoindent by default
 :set autoindent
+
+au BufRead,BufNewFile *.go set filetype=go

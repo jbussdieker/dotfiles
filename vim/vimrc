@@ -5,6 +5,7 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 :syntax on
 :set autochdir
+:silent !mkdir -p ~/tmp/vim
 :set directory=~/tmp/vim//
 
 " Soft tabs by default

@@ -14,14 +14,7 @@ done
 [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 
 # GIT Stuff
-ps1_git_status()
-{
-  local git_status="$(git status 2>/dev/null)"
-
-  [[ "${git_status}" = *deleted* ]]                    && printf "%s" "-"
-  [[ "${git_status}" = *Untracked[[:space:]]files:* ]] && printf "%s" "+"
-  [[ "${git_status}" = *modified:* ]]                  && printf "%s" "*"
-}
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Custom prompt
    RESET="\[\033[0m\]"
@@ -34,7 +27,7 @@ LTPURPLE="\[\033[1;35m\]"
   LTCYAN="\[\033[1;36m\]"
    WHITE="\[\033[1;37m\]"
 
-PS1="${DKGREY}[${LTBLUE}\u${RESET}@${LTCYAN}\H${DKGREY}:${WHITE}${SSH_TTY:-o} ${LTGREEN}\$(ps1_git_status)${DKGREY}] ${WHITE}\w ${LTRED}\$(rvm-prompt)${RESET}\n\$ "
+PS1="${DKGREY}[${LTBLUE}\u${RESET}@${LTCYAN}\H${DKGREY}:${WHITE}${SSH_TTY:-o}${DKGREY}] ${WHITE}\w${LTGREEN}\$(__git_ps1) ${LTRED}\$(rvm-prompt)${RESET}\n\$ "
 
 # Hack for Nokogiri
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true

@@ -7,3 +7,6 @@
 [submodule "vim/bundle/gnupg"]
 	path = vim/bundle/gnupg
 	url = https://github.com/jamessan/vim-gnupg
+[submodule "vim/bundle/puppet"]
+	path = vim/bundle/puppet
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git

@@ -17,6 +17,7 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 :set autoindent
 
 au BufRead,BufNewFile *.go set filetype=go
+au BufRead,BufNewFile *.pp set filetype=puppet
 
 " Fix vim's ridiculous paste handling when autoindent is on
 let &t_SI .= "\<Esc>[?2004h"

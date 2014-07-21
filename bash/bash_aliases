@@ -7,6 +7,13 @@ for index in 3 10; do
   alias cd${index}="ssh josh@c${index}.moov-dev.sh"
 done
 
+alias vgs='vagrant global-status'
+alias vu='vagrant up'
+alias vs='vagrant status'
+alias vp='vagrant provision'
+alias vd='vagrant destroy -f'
+alias vh='vagrant halt'
+
 # GVM Stuff
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 

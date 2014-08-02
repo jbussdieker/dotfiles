@@ -13,6 +13,27 @@ alias vs='vagrant status'
 alias vp='vagrant provision'
 alias vd='vagrant destroy -f'
 alias vh='vagrant halt'
+alias vssh='vagrant ssh'
+
+grep_kill() {
+  list=$(ps -edf | grep $1 | grep -v grep)
+  if [ "x$list" == "x" ]; then
+    echo "No processes found matching '$1'"
+  else
+    echo "***** WARNING: The following processes will be killed ******"
+    echo "$list"
+    echo "************************************************************"
+    proc_count=$(echo "$list" | wc -l)
+    read -p "Proceed? " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      echo "$list" | awk '{print $2}' | xargs kill -9
+      echo "Killed $proc_count processes"
+    fi
+  fi
+}
+
+alias kg=grep_kill
 
 # GVM Stuff
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
